@@ -60,4 +60,22 @@ class User < ActiveRecord::Base
   def want?(item)
     want_items.include?(item)
   end
+
+  ## 表示用
+  def following_users_count
+    following_users.count
+  end
+  
+  def followed_users_count
+    followed_users.count
+  end
+  
+  def want_items_count
+    want_items.count
+  end
+  
+  def have_items_count
+    have_items.count
+  end
 end
+
